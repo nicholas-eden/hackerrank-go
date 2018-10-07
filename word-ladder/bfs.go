@@ -56,7 +56,7 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 			}
 
 			depth, ok := visited[word]
-			if depth > node.depth {
+			if ok && depth > node.depth {
 				visited[word] = node.depth + 1
 			}
 
